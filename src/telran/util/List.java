@@ -97,8 +97,6 @@ public interface List<T> {
 	 * @return true if at least one object has been removed otherwise - false
 	 */
 	boolean removeIf(Predicate<T> predicate);
-<<<<<<< HEAD
-=======
 	
 	/**
 	 * sorts array of T objects in accordance with the natural order
@@ -143,5 +141,4 @@ public interface List<T> {
 		return false;
 	}
 
->>>>>>> origin/master
 }
