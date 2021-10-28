@@ -44,6 +44,7 @@ public interface List<T> {
 	 * @param pattern
 	 * @return true if there is at least one object equaled to a given pattern, otherwise - false
 	 */
+	//[YG] this default method doesn't make a sense. See classwork removeAll method. Try to figure out only proper predicate and use only indexOf(Predicate) method
 	default boolean contains(T pattern) {
 		boolean res = false;
 		for (int i = 0; i < size(); i++) {
@@ -60,6 +61,7 @@ public interface List<T> {
 	 * @param pattern
 	 * @return index of the first occurrence of an object equaled to a given pattern, or -1 if no such object
 	 */
+	//[YG] this default method doesn't make a sense. See classwork removeAll method. Try to figure out only proper predicate and use only indexOf(Predicate) method
 	default int indexOf(T pattern) {
 		int res = -1;
 		for (int i = 0; i < size(); i++) {
@@ -76,6 +78,7 @@ public interface List<T> {
 	 * @param pattern
 	 * @return index of the last occurrence of an object equaled to a given pattern, or -1 if no such object
 	 */
+	//[YG] this default method doesn't make a sense. See classwork removeAll method. Try to figure out only proper predicate and use only lastIndexOf(Predicate) method
 	default int lastIndexOf(T pattern) {
 		int res = -1;
 		for (int i = size() - 1; i >= 0; i--) {
@@ -92,6 +95,7 @@ public interface List<T> {
 	 * @param predicate
 	 * @return true in the case the list contains ate least one object matching a condition of a given predicate, otherwise - false
 	 */
+	//[YG] - to apply indexOf(predicate)
 	default boolean contains(Predicate<T> predicate) {
 		boolean res = false;
 		for (int i = 0; i < size(); i++) {
@@ -160,11 +164,12 @@ public interface List<T> {
 	 * @param list
 	 * @return true if at least one object has been removed
 	 */
+	//[YG] see removeAll example and do the same. You should only create a proper predicate
 	default boolean retainAll(List<T> list) {
 		boolean res = false;
 		for (int i = 0; i < size(); i++) { 
 			if (!this.contains(list.get(i))) {
-				removeAll(list);
+				removeAll(list);//[YG] - wrong statement. retainAll and removeAll are fully opposite methods. What removeAll removes is not removed by retainAll and vice versa 
 				res = true;
 			}
 		}
