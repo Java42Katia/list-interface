@@ -78,7 +78,7 @@ public interface List<T> {
 	 */
 	default int lastIndexOf(T pattern) {
 		int res = -1;
-		for (int i = size() - 1; i > size(); i--) {
+		for (int i = size() - 1; i > 0; i--) {
 			if (pattern.equals(this.get(i))) {
 				res = i;
 				break;
