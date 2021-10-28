@@ -128,6 +128,7 @@ public interface List<T> {
 	 */
 	default void sort() {
 		//TODO write default implementation based on the method sort with comparator
+		sort((Comparator<T>) Comparator.naturalOrder());
 	}
 	
 	/**
