@@ -130,7 +130,6 @@ public interface List<T> {
 		//TODO write default implementation based on the method sort with comparator
 		sort((Comparator<T>) Comparator.naturalOrder());
 	}
-	
 	/**
 	 * sorts array of T objects in accordance with  a given comparator object (comp)
 	 * @param comp
