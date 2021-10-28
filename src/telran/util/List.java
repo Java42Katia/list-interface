@@ -1,4 +1,4 @@
-package telran.util;
+package src.telran.util;
 
 import java.util.Collection;
 import java.util.Comparator;
